@@ -202,6 +202,18 @@ initContactForm() {
   },
 };
 
+function openLightbox(src) {
+  const lightbox = document.getElementById("lightbox");
+  const img = document.getElementById("lightboxImg");
+  lightbox.classList.remove("hidden");
+  img.src = src;
+}
+
+document.getElementById("closeLightbox").addEventListener("click", () => {
+  document.getElementById("lightbox").classList.add("hidden");
+});
+
+
 function openCertificateModal() {
   document.getElementById('certificateModal').classList.remove('hidden');
   document.getElementById('certificateModal').classList.add('flex');
