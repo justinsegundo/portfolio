@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Front-End Developer with Back-End Skills. Entry-level developer with production experience from TinkerPro POS. Specializing in React, PHP, and responsive web development.">
+    <meta name="keywords" content="front-end developer, web developer, React developer, PHP developer, TinkerPro POS, Justin Segundo">
+    <meta name="author" content="Justin Ian Segundo">
+    <meta name="description" content="Front-End Developer with Back-End Skills. Entry-level developer with production experience from TinkerPro POS. Specializing in React, PHP, and responsive web development.">
+    <meta name="keywords" content="front-end developer, web developer, React developer, PHP developer, Justin Segundo, portfolio">
+    <meta name="author" content="Justin Ian Segundo">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Justin Segundo - Front-End Developer">
+    <meta property="og:description" content="Entry-level developer with real production experience from TinkerPro POS">
+    <meta property="og:image" content="https://yourdomain.com/images/profile_pp.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Justin Segundo - Front-End Developer">
+    <meta name="twitter:description" content="Front-End Developer with production experience">
+    <meta name="twitter:image" content="https://yourdomain.com/images/profile_pp.jpg">
+    <title>Justin Segundo - Developer</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="images/fav-icon.png" sizes="96x96">
+
+     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .hero-image {
+        transition: transform 0.3s ease;
+      }
+
+      .hero-image:hover {
+        transform: scale(1.02);
+      }
+
+      .project-image {
+        transition: transform 0.4s ease;
+      }
+
+      .project-card:hover .project-image {
+        transform: scale(1.05);
+      }
+
+      nav {
+        backdrop-filter: blur(10px);
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+      }
+      .dark {
+        color-scheme: dark;
+      }
+
+      .dark body {
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+
+      .dark nav {
+        background-color: rgba(15, 23, 42, 0.9);
+        border-color: #334155;
+      }
+
+      .theme-toggle {
+        width: 48px;
+        height: 24px;
+        background-color: #cbd5e1;
+        border-radius: 12px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .dark .theme-toggle {
+        background-color: #475569;
+      }
+
+      .theme-toggle-circle {
+        width: 18px;
+        height: 18px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        transition: transform 0.3s ease;
+      }
+
+      .dark .theme-toggle-circle {
+        transform: translateX(24px);
+      }
+      .tab-content {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+    </style>
+  </head>
+  <body class="bg-white dark:bg-slate-900 text-gray-900 dark:text-slate-100">
+      <nav class="fixed top-0 w-full bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-700 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="relative group">
+        <span class="text-lg font-semibold text-gray-900 dark:text-slate-100 tracking-tight transition-opacity group-hover:opacity-70">
+          justin segundo
+        </span>
+        <div class="absolute bottom-0 left-0 w-12 h-0.5 bg-gray-900 dark:bg-slate-100 transition-all group-hover:w-full"></div>
+      </a>
+
+      <div class="flex items-center gap-4">
+        <ul class="hidden md:flex gap-8">
+          <li>
+            <a href="#about" class="text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 text-sm transition">About</a>
+          </li>
+          <li>
+            <a href="#projects" class="text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 text-sm transition">Work</a>
+          </li>
+          <li>
+            <a href="#tech" class="text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 text-sm transition">Skills & Expertise</a>
+          </li>
+          <li>
+            <a href="#contact" class="text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 text-sm transition">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <div class="theme-toggle-circle"></div>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-toggle" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-900 dark:text-slate-100" aria-label="Toggle menu">
+          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+  <div id="mobile-menu" class="md:hidden border-t border-gray-200 dark:border-slate-700 transition-all duration-300 ease-in-out max-h-0 opacity-0 overflow-hidden">
+    <ul class="px-6 py-6 space-y-1">
+      <li>
+        <a href="#about" class="block text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 text-sm transition py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 px-3 -mx-3">About</a>
+      </li>
+      <li>
+        <a href="#projects" class="block text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 text-sm transition py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 px-3 -mx-3">Work</a>
+      </li>
+      <li>
+        <a href="#tech" class="block text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 text-sm transition py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 px-3 -mx-3">Skills &amp; Expertise</a>
+      </li>
+      <li>
+        <a href="#contact" class="block text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 text-sm transition py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 px-3 -mx-3">Contact</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+<section
+  class="min-h-screen flex items-center pt-28 md:pt-28 lg:pt-32 pb-16 px-6 bg-white dark:bg-slate-900"
+>
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center wow animate__animated animate__fadeIn">
+    <div class="wow animate__animated animate__fadeInLeft order-2 md:order-1">
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-slate-100 mb-4 md:mb-6 leading-[1.1] tracking-tight"
+      >
+        Front-End Developer with Back-End Skills
+      </h1>
+
+      <p
+        class="text-base md:text-lg text-gray-600 dark:text-slate-300 mb-3 leading-relaxed"
+      >
+        Entry-level developer with real production experience from TinkerPro POS
+      </p>
+
+      <p
+        class="text-sm md:text-base text-gray-500 dark:text-slate-400 mb-6 md:mb-8 leading-relaxed"
+      >
+        I build responsive interfaces and integrate front-end features with
+        APIs and back-end logic. Experienced in UI improvements, theme
+        customization, batch data processing, and enhancing real POS system
+        functionality.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 mb-10">
+        <a
+          href="#projects"
+          class="px-6 py-3 bg-gray-900 dark:bg-slate-100 text-white dark:text-slate-900 text-sm font-medium hover:bg-gray-800 dark:hover:bg-slate-200 transition text-center"
+        >
+          View work
+        </a>
+        <a 
+          href="files/Justin-Ian-Segundo-Resume.pdf"
+          download="Justin-Ian-Segundo-Resume.pdf"
+          class="px-6 py-3 border-2 border-gray-900 dark:border-slate-100 text-gray-900 dark:text-slate-100 text-sm font-medium hover:bg-gray-900 dark:hover:bg-slate-100 hover:text-white dark:hover:text-slate-900 transition text-center"
+        >
+          Download Resume
+        </a>
+      </div>
+    </div>
+
+   <div class="wow animate__animated animate__fadeInRight order-1 md:order-2">
+  <div class="relative max-w-sm mx-auto md:max-w-none z-10">
+    <div class="absolute -right-4 md:-right-8 -top-4 md:-top-8 w-full h-full bg-red-400 -z-10"></div>
+        
+        <div class="overflow-hidden">
+          <img
+            src="images/profile_pp.jpg"
+            alt="Justin Ian Segundo"
+            class="w-full aspect-[4/5] md:aspect-[5/6] object-cover hover:scale-105 transition duration-500"
+          />
+        </div>
+
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-white dark:bg-slate-800 p-4 md:p-6 border-t-4 border-gray-900 dark:border-slate-100"
+        >
+          <div class="flex justify-between items-end">
+            <div>
+              <div class="text-xs text-gray-500 dark:text-slate-400 mb-1">
+                Experience
+              </div>
+              <div class="text-xl md:text-2xl font-bold text-gray-900 dark:text-slate-100">
+                2+ months
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs text-gray-500 dark:text-slate-400 mb-1">
+                Projects
+              </div>
+              <div class="text-xl md:text-2xl font-bold text-gray-900 dark:text-slate-100">
+                4
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-20 px-6 bg-white dark:bg-slate-900">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-16 wow animate__animated animate__fadeInUp">
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-slate-100 mb-2 tracking-tight">
+        About
+      </h2>
+      <p class="text-gray-600 dark:text-slate-400">
+        Background and Experience
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-12 mb-20">
+      <div class="md:col-span-2 space-y-8 wow animate__animated animate__fadeInUp">
+        <p class="text-gray-600 dark:text-slate-300 leading-relaxed">
+          I'm a recent graduate passionate about building real-world web
+          applications. During my time at TinkerPro POS, I contributed
+          directly to production features used daily by live
+          customers—improving UI components, optimizing workflows, and
+          helping ship reliable updates.
+        </p>
+        <p class="text-gray-600 dark:text-slate-300 leading-relaxed">
+          My work involved both front-end and back-end contributions for POS
+          software—building responsive interfaces, enhancing theme
+          customization, writing API endpoints, and developing batch import
+          tools. I learned to understand the full flow of a production
+          system, from UI interactions to backend logic and database
+          operations.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-10">
+          <div class="flex flex-col">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-slate-100 mb-4 pb-2 border-b border-gray-200 dark:border-slate-700 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+              Certificate of Employment
+            </h3>
+            <button onclick="openCertificateModal()" class="flex-1 w-full group relative overflow-hidden bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 p-6 text-left">
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-2">
+                  <div class="w-10 h-10 bg-gray-100 dark:bg-slate-700 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-gray-900 dark:text-slate-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                  </div>
+                  <div class="border border-transparent 
+            hover:border-gray-300 dark:hover:border-slate-600
+            dark:border-transparent
+            transition-colors duration-300">
+                    <div class="text-sm font-semibold text-gray-900 dark:text-slate-100">TinkerPro POS</div>
+                    <div class="text-xs text-gray-500 dark:text-slate-400">Official Document</div>
+                  </div>
+                </div>
+                <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-900 dark:group-hover:text-slate-100 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+              </div>
+              <div class="text-xs text-gray-600 dark:text-slate-300 leading-relaxed">
+                Click to view certificate details and employment verification
+              </div>
+             
+          </div>
+
+          <div class="flex flex-col">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-slate-100 mb-4 pb-2 border-b border-gray-200 dark:border-slate-700 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6"/>
+              </svg>
+              Education
+            </h3>
+            <div class="flex-1 bg-white dark:bg-slate-800 p-5 border-2 border-gray-200 dark:border-slate-700 hover:border-gray-300 dark:hover:border-slate-600 transition-colors duration-300">
+              <h4 class="font-semibold text-gray-900 dark:text-slate-100 text-sm mb-2">
+                CTU - Carmen Campus
+              </h4>
+              <p class="text-gray-700 dark:text-slate-300 text-xs leading-relaxed mb-2">
+                Bachelor of Industrial Technology Major in Computer Technology
+              </p>
+              <div class="flex items-center gap-2 mt-3">
+                <svg class="w-3.5 h-3.5 text-gray-500 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                <p class="text-gray-500 dark:text-slate-400 text-xs font-medium">
+                  2024-2025
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wow animate__animated animate__fadeInUp">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-8 pb-3 border-b border-gray-300 dark:border-slate-600">
+          Core Strengths
+        </h3>
+
+        <div class="space-y-1">
+          <div class="group">
+            <div class="flex items-center gap-3 py-3 px-2 -mx-2 rounded transition-colors hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <div class="text-gray-400 dark:text-slate-500 group-hover:text-gray-900 dark:group-hover:text-slate-100 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <div class="font-medium text-gray-900 dark:text-slate-100 text-sm">
+                  Front-end Development
+                </div>
+                <div class="text-xs text-gray-500 dark:text-slate-500 mt-0.5">
+                  React, jQuery, Responsive UI
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-3 py-3 px-2 -mx-2 rounded transition-colors hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <div class="text-gray-400 dark:text-slate-500 group-hover:text-gray-900 dark:group-hover:text-slate-100 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <div class="font-medium text-gray-900 dark:text-slate-100 text-sm">
+                  Backend & Database
+                </div>
+                <div class="text-xs text-gray-500 dark:text-slate-500 mt-0.5">
+                  PHP, MySQL, Data Optimization
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-3 py-3 px-2 -mx-2 rounded transition-colors hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <div class="text-gray-400 dark:text-slate-500 group-hover:text-gray-900 dark:group-hover:text-slate-100 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <div class="font-medium text-gray-900 dark:text-slate-100 text-sm">
+                  API Development
+                </div>
+                <div class="text-xs text-gray-500 dark:text-slate-500 mt-0.5">
+                  REST APIs, Integration
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-3 py-3 px-2 -mx-2 rounded transition-colors hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <div class="text-gray-400 dark:text-slate-500 group-hover:text-gray-900 dark:group-hover:text-slate-100 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <div class="font-medium text-gray-900 dark:text-slate-100 text-sm">
+                  Production Systems
+                </div>
+                <div class="text-xs text-gray-500 dark:text-slate-500 mt-0.5">
+                  Maintenance, Deployment
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-3 py-3 px-2 -mx-2 rounded transition-colors hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <div class="text-gray-400 dark:text-slate-500 group-hover:text-gray-900 dark:group-hover:text-slate-100 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <div class="font-medium text-gray-900 dark:text-slate-100 text-sm">
+                  Performance
+                </div>
+                <div class="text-xs text-gray-500 dark:text-slate-500 mt-0.5">
+                  Batch Processing, Optimization
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-3 py-3 px-2 -mx-2 rounded transition-colors hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <div class="text-gray-400 dark:text-slate-500 group-hover:text-gray-900 dark:group-hover:text-slate-100 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <div class="font-medium text-gray-900 dark:text-slate-100 text-sm">
+                  UI/UX Design
+                </div>
+                <div class="text-xs text-gray-500 dark:text-slate-500 mt-0.5">
+                  Interface Redesign, Usability
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="certificateModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4" onclick="closeCertificateModal()">
+  <div class="relative w-full max-w-3xl max-h-[90vh] flex flex-col" onclick="event.stopPropagation()">
+    <button onclick="closeCertificateModal()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="bg-white dark:bg-slate-900 overflow-auto max-h-[90vh]">
+      <img src="images/coe-justin.png" alt="Certificate of Employment" class="w-full h-auto"/>
+    </div>
+  </div>
+</div>
+    <section id="projects" class="py-20 px-6 bg-white dark:bg-slate-900">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-12 wow animate__animated animate__fadeInUp">
+          <h2
+            class="text-4xl font-bold text-gray-900 dark:text-slate-100 mb-2 tracking-tight"
+          >
+            Work
+          </h2>
+          <p class="text-gray-600 dark:text-slate-400">
+            Production experience at TinkerPro POS
+          </p>
+        </div>
+
+        <div
+          class="mb-8 flex gap-3 border-b border-gray-200 dark:border-slate-700"
+        >
+          <button
+            class="tab-btn active px-6 py-3 text-sm font-medium transition-all border-b-2 border-gray-900 dark:border-slate-100 text-gray-900 dark:text-slate-100"
+            data-tab="featured"
+          >
+            Featured Projects
+          </button>
+          <button
+            class="tab-btn px-6 py-3 text-sm font-medium transition-all border-b-2 border-transparent text-gray-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100"
+            data-tab="additional"
+          >
+            Additional Work
+          </button>
+        </div>
+
+        <div class="tab-content" id="featured" style="display: block;">
+          <div class="grid md:grid-cols-2 gap-10">
+            <div class="group wow animate__animated animate__fadeInUp">
+              <div
+                class="mb-5 overflow-hidden cursor-pointer rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+                onclick="this.querySelector('img').requestFullscreen()"
+              >
+                <img
+                  src="images/theme-settings.png"
+                  alt="Theme Settings System"
+                  class="w-full h-auto rounded-lg hover:scale-[1.02] transition-transform duration-500 object-cover aspect-video"
+                />
+              </div>
+              <div
+                class="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 p-8"
+              >
+                <h3
+                  class="text-xl font-bold text-gray-900 dark:text-slate-100 mb-3 flex items-center gap-2"
+                >
+               
+                  Theme Settings System
+                </h3>
+                <p
+                  class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed mb-4"
+                >
+                  Built a dynamic theme selector allowing users to customize POS
+                  interface colors with live preview and database-driven
+                  settings.
+                </p>
+                <div class="flex flex-wrap gap-2 items-center mb-3">
+                  <span
+                    class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded text-xs font-medium"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded text-xs font-medium"
+                    >CSS</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded text-xs font-medium"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded text-xs font-medium"
+                    >jQuery</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded text-xs font-medium"
+                    >PHP</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-2 text-xs text-gray-500 dark:text-slate-400"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  Production Feature
+                </div>
+              </div>
+            </div>
+
+            <div class="group wow animate__animated animate__fadeInUp">
+              <div
+                class="mb-5 overflow-hidden cursor-pointer rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+                onclick="this.querySelector('img').requestFullscreen()"
+              >
+                <img
+                  src="images/ui-redesign.png"
+                  alt="Settings UI Redesign"
+                  class="w-full h-auto rounded-lg hover:scale-[1.02] transition-transform duration-500 object-cover aspect-video"
+                />
+              </div>
+              <div
+                class="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 p-8"
+              >
+                <h3
+                  class="text-xl font-bold text-gray-900 dark:text-slate-100 mb-3 flex items-center gap-2"
+                >
+                 
+                  Settings UI Redesign
+                </h3>
+                <p
+                  class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed mb-4"
+                >
+                  Redesigned Settings module using modern layout principles,
+                  improved typography, and responsive design for better
+                  usability.
+                </p>
+                <div class="flex flex-wrap gap-2 items-center mb-3">
+                  <span
+                    class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded text-xs font-medium"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded text-xs font-medium"
+                    >CSS</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded text-xs font-medium"
+                    >JavaScript</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-2 text-xs text-gray-500 dark:text-slate-400"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  UI/UX Enhancement
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<div class="tab-content" id="additional" style="display: none;">
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 p-8 wow animate__animated animate__fadeInUp">
+      <div class="flex items-start gap-4 mb-6">
+        <div class="w-12 h-12 bg-gray-900 dark:bg-slate-100 flex items-center justify-center flex-shrink-0">
+          <svg class="w-7 h-7 text-white dark:text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h4 class="text-xl font-bold text-gray-900 dark:text-slate-100 mb-2">
+            Bulk Product Import System
+          </h4>
+          <div class="inline-block px-2 py-1 bg-gray-900 dark:bg-slate-100 text-white dark:text-slate-900 text-xs font-medium mb-3">
+            29,000+ Products
+          </div>
+        </div>
+      </div>
+      
+      <p class="text-sm text-gray-600 dark:text-slate-300 mb-6 leading-relaxed">
+        Developed a CSV importer for 29,000+ products using 500-row batch processing to prevent timeouts. Coordinated with senior developer to improve error handling and performance.
+      </p>
+      
+      <div class="flex flex-wrap gap-2">
+        <span class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 text-xs font-medium">PHP</span>
+        <span class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 text-xs font-medium">MySQL</span>
+        <span class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 text-xs font-medium">Batch Processing</span>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 p-8 wow animate__animated animate__fadeInUp">
+      <div class="flex items-start gap-4 mb-6">
+        <div class="w-12 h-12 bg-gray-900 dark:bg-slate-100 flex items-center justify-center flex-shrink-0">
+          <svg class="w-7 h-7 text-white dark:text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h4 class="text-xl font-bold text-gray-900 dark:text-slate-100 mb-2">
+            POS Module APIs
+          </h4>
+          <div class="inline-block px-2 py-1 bg-gray-900 dark:bg-slate-100 text-white dark:text-slate-900 text-xs font-medium mb-3">
+            REST APIs
+          </div>
+        </div>
+      </div>
+      
+      <p class="text-sm text-gray-600 dark:text-slate-300 mb-6 leading-relaxed">
+        Created and updated REST-style API endpoints for POS modules. Focused on secure input handling, dynamic data retrieval, and efficient SQL operations.
+      </p>
+      
+      <div class="flex flex-wrap gap-2">
+        <span class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 text-xs font-medium">PHP</span>
+        <span class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 text-xs font-medium">REST API</span>
+        <span class="px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 text-xs font-medium">MySQL</span>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </section>
+
+<section id="tech" class="py-20 px-6 bg-white dark:bg-slate-900">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-16 wow animate__animated animate__fadeInUp">
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-slate-100 mb-2 tracking-tight">
+        Skills & Expertise
+      </h2>
+      <p class="text-gray-600 dark:text-slate-400">
+        Technologies I work with to build modern web applications
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8 mb-32 wow animate__animated animate__fadeInUp">
+      <div class="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 p-8">
+        <div class="flex items-center gap-3 mb-8 pb-4 border-b-2 border-gray-900 dark:border-slate-100">
+          <svg class="w-6 h-6 text-gray-900 dark:text-slate-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+          </svg>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-slate-100">Front-End Development</h3>
+        </div>
+        
+        <div class="space-y-5">
+          <div class="group">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-gray-100 dark:bg-slate-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-7 h-7" />
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-sm font-semibold text-gray-900 dark:text-slate-100">HTML & CSS</span>
+                  <span class="text-xs font-medium text-gray-500 dark:text-slate-400">90%</span>
+                </div>
+                <div class="h-1.5 bg-gray-200 dark:bg-slate-700 overflow-hidden">
+                  <div class="h-full bg-gray-900 dark:bg-slate-300 transition-all duration-500" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-gray-100 dark:bg-slate-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-7 h-7" />
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-sm font-semibold text-gray-900 dark:text-slate-100">JavaScript</span>
+                  <span class="text-xs font-medium text-gray-500 dark:text-slate-400">85%</span>
+                </div>
+                <div class="h-1.5 bg-gray-200 dark:bg-slate-700 overflow-hidden">
+                  <div class="h-full bg-gray-900 dark:bg-slate-300 transition-all duration-500" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-gray-100 dark:bg-slate-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-7 h-7" />
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-sm font-semibold text-gray-900 dark:text-slate-100">React.js</span>
+                  <span class="text-xs font-medium text-gray-500 dark:text-slate-400">70%</span>
+                </div>
+                <div class="h-1.5 bg-gray-200 dark:bg-slate-700 overflow-hidden">
+                  <div class="h-full bg-gray-900 dark:bg-slate-300 transition-all duration-500" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-gray-100 dark:bg-slate-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="jQuery" class="w-7 h-7" />
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-sm font-semibold text-gray-900 dark:text-slate-100">jQuery</span>
+                  <span class="text-xs font-medium text-gray-500 dark:text-slate-400">80%</span>
+                </div>
+                <div class="h-1.5 bg-gray-200 dark:bg-slate-700 overflow-hidden">
+                  <div class="h-full bg-gray-900 dark:bg-slate-300 transition-all duration-500" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-gray-100 dark:bg-slate-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="w-7 h-7" />
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-sm font-semibold text-gray-900 dark:text-slate-100">Tailwind CSS</span>
+                  <span class="text-xs font-medium text-gray-500 dark:text-slate-400">85%</span>
+                </div>
+                <div class="h-1.5 bg-gray-200 dark:bg-slate-700 overflow-hidden">
+                  <div class="h-full bg-gray-900 dark:bg-slate-300 transition-all duration-500" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 p-8">
+        <div class="flex items-center gap-3 mb-8 pb-4 border-b-2 border-gray-900 dark:border-slate-100">
+          <svg class="w-6 h-6 text-gray-900 dark:text-slate-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+          </svg>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-slate-100">Back-End & Tools</h3>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="group">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-gray-100 dark:bg-slate-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="w-7 h-7" />
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-sm font-semibold text-gray-900 dark:text-slate-100">PHP</span>
+                  <span class="text-xs font-medium text-gray-500 dark:text-slate-400">80%</span>
+                </div>
+                <div class="h-1.5 bg-gray-200 dark:bg-slate-700 overflow-hidden">
+                  <div class="h-full bg-gray-900 dark:bg-slate-300 transition-all duration-500" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-gray-100 dark:bg-slate-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-7 h-7" />
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-sm font-semibold text-gray-900 dark:text-slate-100">MySQL</span>
+                  <span class="text-xs font-medium text-gray-500 dark:text-slate-400">75%</span>
+                </div>
+                <div class="h-1.5 bg-gray-200 dark:bg-slate-700 overflow-hidden">
+                  <div class="h-full bg-gray-900 dark:bg-slate-300 transition-all duration-500" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-gray-100 dark:bg-slate-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <svg class="w-7 h-7 text-gray-900 dark:text-slate-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-sm font-semibold text-gray-900 dark:text-slate-100">REST APIs</span>
+                  <span class="text-xs font-medium text-gray-500 dark:text-slate-400">70%</span>
+                </div>
+                <div class="h-1.5 bg-gray-200 dark:bg-slate-700 overflow-hidden">
+                  <div class="h-full bg-gray-900 dark:bg-slate-300 transition-all duration-500" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-gray-100 dark:bg-slate-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-7 h-7" />
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-sm font-semibold text-gray-900 dark:text-slate-100">Git & Version Control</span>
+                  <span class="text-xs font-medium text-gray-500 dark:text-slate-400">80%</span>
+                </div>
+                <div class="h-1.5 bg-gray-200 dark:bg-slate-700 overflow-hidden">
+                  <div class="h-full bg-gray-900 dark:bg-slate-300 transition-all duration-500" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-10 h-10 bg-gray-100 dark:bg-slate-700 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="w-7 h-7" />
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-sm font-semibold text-gray-900 dark:text-slate-100">VS Code & DevTools</span>
+                  <span class="text-xs font-medium text-gray-500 dark:text-slate-400">85%</span>
+                </div>
+                <div class="h-1.5 bg-gray-200 dark:bg-slate-700 overflow-hidden">
+                  <div class="h-full bg-gray-900 dark:bg-slate-300 transition-all duration-500" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center wow animate__animated animate__fadeInUp">
+      <p class="text-gray-600 dark:text-slate-400 text-sm">
+        Always learning and exploring new technologies to deliver better solutions
+      </p>
+    </div>
+  </div>
+</section>
+
+
+ <section id="contact" class="py-20 px-6 bg-white dark:bg-slate-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 dark:text-slate-100 mb-2 tracking-tight">
+          Get in Touch
+        </h2>
+        <p class="text-gray-600 dark:text-slate-400">
+          I'm open to full-time opportunities, freelance projects, and collaborations. Let's discuss how we can work together.
+
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-12">
+        <div class="lg:col-span-2 space-y-8">
+          <div>
+            <h3 class="text-sm font-medium text-gray-500 dark:text-slate-400 uppercase tracking-wider mb-6">
+             Contact Details
+
+            </h3>
+            
+            <div class="space-y-6">
+              <a href="mailto:justinian.segundo1@gmail.com" 
+                 class="group flex items-start gap-4 p-4 rounded-lg border border-gray-200 dark:border-slate-700 hover:border-gray-900 dark:hover:border-slate-400 transition-all">
+                <div class="flex-shrink-0 w-10 h-10 bg-gray-100 dark:bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-slate-100 transition-colors">
+                  <svg class="w-5 h-5 text-gray-900 dark:text-slate-100 group-hover:text-white dark:group-hover:text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-500 dark:text-slate-400 mb-1">Email</div>
+                  <div class="text-sm font-medium text-gray-900 dark:text-slate-100">justinian.segundo1@gmail.com</div>
+                </div>
+              </a>
+
+              <a href="https://github.com/justinsegundo" 
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="group flex items-start gap-4 p-4 rounded-lg border border-gray-200 dark:border-slate-700 hover:border-gray-900 dark:hover:border-slate-400 transition-all">
+                <div class="flex-shrink-0 w-10 h-10 bg-gray-100 dark:bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-slate-100 transition-colors">
+                  <svg class="w-5 h-5 text-gray-900 dark:text-slate-100 group-hover:text-white dark:group-hover:text-slate-900" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-500 dark:text-slate-400 mb-1">GitHub</div>
+                  <div class="text-sm font-medium text-gray-900 dark:text-slate-100">github.com/justinsegundo</div>
+                </div>
+              </a>
+
+              <a href="https://linkedin.com/in/justinsegundo" 
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="group flex items-start gap-4 p-4 rounded-lg border border-gray-200 dark:border-slate-700 hover:border-gray-900 dark:hover:border-slate-400 transition-all">
+                <div class="flex-shrink-0 w-10 h-10 bg-gray-100 dark:bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-gray-900 dark:group-hover:bg-slate-100 transition-colors">
+                  <svg class="w-5 h-5 text-gray-900 dark:text-slate-100 group-hover:text-white dark:group-hover:text-slate-900" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-500 dark:text-slate-400 mb-1">LinkedIn</div>
+                  <div class="text-sm font-medium text-gray-900 dark:text-slate-100">linkedin.com/in/justinsegundo</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-gray-200 dark:border-slate-700">
+            <h4 class="text-sm font-medium text-gray-900 dark:text-slate-100 mb-3">Availability</h4>
+            <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-slate-300">
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+              </span>
+             Open to full-time front-end development opportunities and freelance projects
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3">
+         <form id="contactForm" method="POST" class="space-y-6">
+  <div id="formStatus" class="hidden p-4 rounded-lg text-sm"></div>
+  
+  <div class="grid md:grid-cols-2 gap-6">
+    <div>
+      <label for="name" class="block text-sm font-medium text-gray-900 dark:text-slate-100 mb-2">
+        Your Name
+      </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="John Doe"
+        class="w-full px-4 py-3 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 text-gray-900 dark:text-slate-100 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-slate-400 focus:border-transparent transition"
+      />
+    </div>
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-900 dark:text-slate-100 mb-2">
+        Email Address
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="john@example.com"
+        class="w-full px-4 py-3 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 text-gray-900 dark:text-slate-100 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-slate-400 focus:border-transparent transition"
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="subject" class="block text-sm font-medium text-gray-900 dark:text-slate-100 mb-2">
+      Subject
+    </label>
+    <input
+      type="text"
+      id="subject"
+      name="subject"
+      required
+      placeholder="Project Inquiry"
+      class="w-full px-4 py-3 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 text-gray-900 dark:text-slate-100 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-slate-400 focus:border-transparent transition"
+    />
+  </div>
+
+  <div>
+    <label for="message" class="block text-sm font-medium text-gray-900 dark:text-slate-100 mb-2">
+      Message
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      rows="6"
+      placeholder="Tell me about your project..."
+      class="w-full px-4 py-3 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 text-gray-900 dark:text-slate-100 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-slate-400 focus:border-transparent transition resize-none"
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    id="submitBtn"
+    class="w-full px-6 py-3.5 bg-gray-900 dark:bg-slate-100 text-white dark:text-slate-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-slate-200 transition-all flex items-center justify-center gap-2 group"
+  >
+    <span>Send Message</span>
+    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+    </svg>
+  </button>
+</form>
+
+          <div class="form-status"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <footer class="w-full bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700">
+      <div class="max-w-6xl mx-auto px-6 py-10 text-center">
+        
+          <p class="text-sm text-gray-500 dark:text-slate-400">
+            © 2025 Justin Ian Segundo. All rights reserved.
+          </p>
+       
+       
+      </div>
+    </footer>
+
+   <button
+  id="scrollToTop"
+  class="fixed bottom-8 right-8 w-12 h-12 bg-white dark:bg-slate-800 text-gray-900 dark:text-slate-100 border-2 border-gray-200 dark:border-slate-700 hover:border-gray-900 dark:hover:border-slate-400 flex items-center justify-center transition-all opacity-0 pointer-events-none z-50 shadow-lg"
+  aria-label="Scroll to top"
+>
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+  </svg>
+</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="script/index.js"></script>
+  </body>
+</html>
