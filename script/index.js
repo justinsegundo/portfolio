@@ -8,6 +8,7 @@ const PortfolioApp = {
     this.initContactForm();
     this.initMobileMenu();
     this.initScrollTop();
+    this.initLightBox();
   },
 
   initTailwindConfig() {
@@ -40,7 +41,7 @@ const PortfolioApp = {
       animateClass: "animate__animated",
       offset: 100,
       mobile: true,
-      live: true,
+      live: false,
     }).init();
   },
 
@@ -179,6 +180,8 @@ initContactForm() {
     });
   },
 
+
+
   initScrollTop() {
     const buttons = document.querySelectorAll("#scrollToTop");
     const showAfter = 300;
@@ -200,36 +203,70 @@ initContactForm() {
       });
     });
   },
+
+  initLightBox() {
+     const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    
+    if (!lightbox || !lightboxImg) return;
+
+    window.openLightbox = (imageSrc) => {
+      lightboxImg.src = imageSrc;
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.closeLightbox = () => {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      document.body.style.overflow = '';
+    };
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        window.closeLightbox();
+      }
+    });
+
+    const closeBtn = document.getElementById('closeLightbox');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', window.closeLightbox);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        window.closeLightbox();
+        closeCertificateModal();
+      }
+    });
+  },
+
+  initOpenCertificateModal() {
+    document.getElementById('certificateModal').classList.remove('hidden');
+    document.getElementById('certificateModal').classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  },
+
+  initCloseCertificateModal() {
+    document.getElementById('certificateModal').classList.add('hidden');
+    document.getElementById('certificateModal').classList.remove('flex');
+    document.body.style.overflow = '';
+  },
+
+ 
 };
 
-function openLightbox(src) {
-  const lightbox = document.getElementById("lightbox");
-  const img = document.getElementById("lightboxImg");
-  lightbox.classList.remove("hidden");
-  img.src = src;
-}
-
-document.getElementById("closeLightbox").addEventListener("click", () => {
-  document.getElementById("lightbox").classList.add("hidden");
-});
-
-
 function openCertificateModal() {
-  document.getElementById('certificateModal').classList.remove('hidden');
-  document.getElementById('certificateModal').classList.add('flex');
-  document.body.style.overflow = 'hidden';
+  PortfolioApp.initOpenCertificateModal();
 }
-
 function closeCertificateModal() {
-  document.getElementById('certificateModal').classList.add('hidden');
-  document.getElementById('certificateModal').classList.remove('flex');
-  document.body.style.overflow = '';
+  PortfolioApp.initCloseCertificateModal();
 }
 
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeCertificateModal();
-  }
-});
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => PortfolioApp.init());

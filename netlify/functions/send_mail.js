@@ -15,7 +15,7 @@ exports.handler = async function(event) {
       pass: "ilep drts ldqd zjll", // use Gmail App Password
     },
   });
-
+  
   try {
     await transporter.sendMail({
       from: "justinian.segundo1@gmail.com",
