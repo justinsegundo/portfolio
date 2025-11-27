@@ -1,4 +1,3 @@
-// netlify/functions/send_mail.js
 const nodemailer = require("nodemailer");
 
 exports.handler = async function(event) {
@@ -12,10 +11,10 @@ exports.handler = async function(event) {
     service: "gmail",
     auth: {
       user: "justinian.segundo1@gmail.com",
-      pass: "ilep drts ldqd zjll", // use Gmail App Password
+      pass: "ilep drts ldqd zjll", 
     },
   });
-  
+
   try {
     await transporter.sendMail({
       from: "justinian.segundo1@gmail.com",
