@@ -253,8 +253,6 @@ initContactForm() {
     document.getElementById('certificateModal').classList.remove('flex');
     document.body.style.overflow = '';
   },
-
- 
 };
 
 function openCertificateModal() {
@@ -263,10 +261,5 @@ function openCertificateModal() {
 function closeCertificateModal() {
   PortfolioApp.initCloseCertificateModal();
 }
-
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", () => PortfolioApp.init());
